@@ -1,0 +1,200 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.loaderContainer{
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-name: loadisappear;
+  animation-duration: 0.1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loadisappear{
+  0% {height:100vh}
+  100% {height:0vh}
+}
+
+.textContainer{
+  height: 0px;
+  background-color: white;
+  max-width: 2500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-left: 5%;
+  padding-right: 10%;
+  animation-name: appearing;
+  animation-duration: 3s;
+  animation-delay: 2.2s;
+  overflow: hidden;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearing {
+  0%    {height:0}
+  0%    {opacity: 0}
+  20%   {height:100vh}
+  20%   {opacity: 0}
+  100%  {opacity: 1}
+  100%  {min-height:620px}
+  100%  {padding-top: 30px}
+  100%  {padding-bottom: 30px}
+  100%  {height:100vh}
+}
+
+
+.loadbarOne{
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  animation-name: loading;
+  animation-duration: 2.5s;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  animation-fill-mode: forwards;
+  border-radius: 100%;
+}
+
+.loadbarTwo{
+  background-color: #FEF08F;
+  position: relative;
+  width: 102%;
+  height: 102%;
+  animation-name: loadmoving;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+  0%    {width:  0}
+  0%    {height: 0}
+  0%   {background-color: transparent}
+
+  25%   {width: 100px}
+  25%   {height: 100px}
+  25%   {border-radius: 100%;}
+  25%   {background-color: transparent}
+  26%   {background-color: #E54D01}
+
+  38%   {border-radius: 100%;}
+
+  52%   {transform: rotate(0deg);}
+
+  85%   {height: 100px}
+  85%   {width: 100px}
+  70%   {border-radius: 0%;}
+  85%   {transform: rotate(180deg);}
+
+  100%  {height: 0}
+  100%   {transform: rotate(180deg);}
+  100%   {border-radius: 0%;}
+  100%   {background-color: #E54D01}
+}
+
+@keyframes loadmoving {
+  0%   {left:-100%}
+  100%   {left:100%}
+}
+
+
+
+
+
+a{
+  color: #E54D01;
+  text-decoration: none;
+  transition: letter-spacing 0.2s linear;
+  transition: background-size background-image background-position 0.4s linear;
+  background-repeat: no-repeat;
+  background-position: 0 130%;
+  background-size: 100% 30%;
+  background-image: linear-gradient(120deg, #E54D01 0%, #E54D01 100%);
+
+}
+
+a:hover{
+  letter-spacing: 3.4px;
+  background-position: 0 85%;
+  background-size: 100% 80%;
+  background-image: linear-gradient(120deg, #FEF08F 0%, #FEF5BA 100%);
+
+}
+
+
+
+.bigtext{
+  font-size: calc(1.8em + 2vw);
+  font-family: 'Prata', serif;
+}
+
+.directions{
+  margin-top: 2%;
+  font-size: calc(0.5em + 0.5vw);
+  line-height: 160%;
+  color: #E54D01;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+.highlightme {
+
+background-repeat: no-repeat;
+background-position: 0 85%;
+background-size: 100% 30%;
+background-image: linear-gradient(120deg, #FEF08F 0%, #FEF08F 100%);
+
+ }
+
+.contactbutton{
+  position: absolute;
+  right:3vh;
+  top:3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.5s;
+  font-family: 'Lato', sans-serif;
+  font-size: calc(0.6em + 0.5vw);
+
+}
+
+.linkedin:hover{
+  letter-spacing: 1.3px;
+}
+
+
+
+  @media only screen and (min-width: 2000px) {
+  .bigtext {
+    font-size: 100px;
+  }
+
+  .directions{
+    font-size: 22px;
+  }
+
+.textContainer{
+  max-height: 2000px;
+}
+    }
