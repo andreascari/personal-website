@@ -6,6 +6,16 @@
 
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: var(--yellow);
+}
+
+::selection {
+  color: black;
+  background: var(--yellow);
+}
+
 
 body{
   display: flex;
